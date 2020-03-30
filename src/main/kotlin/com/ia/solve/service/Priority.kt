@@ -26,7 +26,6 @@ class Priority {
 
     fun manhattan(actualBoard: Array<IntArray>): Int {
         var manhattanResult = 0
-        var appends = 0
         for (i in 0..2) {
             for (j in 0..2) {
                 when (actualBoard[i][j]) {
@@ -39,12 +38,11 @@ class Priority {
                     7 -> manhattanResult += abs(2 - i) + j
                     8 -> manhattanResult += abs(2 - i) + abs(1 - j)
                 }
-
-
             }
         }
 
         return manhattanResult
     }
+
 
 }
